@@ -1,5 +1,5 @@
 {
-  "artists": [
+  "arctors": [
     {
       "id": 1,
       "movies": ["Indiana Johns", "The star wars", "Patriot Games"],
@@ -57,7 +57,7 @@
       "id": 1,
       "title": "Indiana Johns",
       "directorId": 1,
-      "artistId": 1,
+      "actorId": 1,
       "studioId": 1,
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/8/8b/IJandCrystalSkull.jpg/220px-IJandCrystalSkull.jpg"
     },
@@ -65,7 +65,7 @@
       "id": 2,
       "title": "Alien",
       "directorId": 2,
-      "artistId": 3,
+      "actorId": 3,
       "studioId": 2,
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/c/c3/Alien_movie_poster.jpg/232px-Alien_movie_poster.jpg"
     },
@@ -73,7 +73,7 @@
       "id": 3,
       "title": "Aliens",
       "directorId": 3,
-      "artistId": 2,
+      "actorId": 2,
       "studioId": 2,
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/f/fb/Aliens_poster.jpg/196px-Aliens_poster.jpg"
     },
@@ -81,7 +81,7 @@
       "id": 4,
       "title": "Pirates of the Caribbean:",
       "directorId": 3,
-      "artistId": 3,
+      "actorId": 3,
       "studioId": 2,
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/7/79/Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg/201px-Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg"
     }
