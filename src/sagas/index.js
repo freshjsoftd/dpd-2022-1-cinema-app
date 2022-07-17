@@ -1,6 +1,6 @@
-import { takeLatest } from 'redux-saga';
+import { takeLatest } from 'redux-saga/effects';
 
-import ACTIONS_TYPES from '../../store/actions/actionsTypes';
+import ACTIONS_TYPES from '../store/actions/actionsTypes';
 import { getAllMoviesSaga } from './moviesSagas';
 
 
