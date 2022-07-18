@@ -1,0 +1,26 @@
+*{
+  box-sizing: border-box;
+}
+.label{
+  min-width: 100px;
+  margin: 5px;
+}
+.error{
+  color: red;
+  font-size: 0.7em;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+.field-container{
+  margin: 10px;
+}
+#form{
+  font-size: 20px;
+}
+input, textarea{
+  font-size: 20px;
+  min-width: 80%;
+}
+textarea{
+  font-size: 15px;
+}
