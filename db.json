@@ -2,7 +2,11 @@
   "arctors": [
     {
       "id": 1,
-      "movies": ["Indiana Johns", "The star wars", "Patriot Games"],
+      "movies": [
+        "Indiana Johns",
+        "The star wars",
+        "Patriot Games"
+      ],
       "fullName": "Harrison Ford",
       "birthYear": "1942",
       "nationality": "USA",
@@ -10,7 +14,11 @@
     },
     {
       "id": 2,
-      "movies": ["Sleepy Hollow", "Pirates of the Caribbean", "The Tourist"],
+      "movies": [
+        "Sleepy Hollow",
+        "Pirates of the Caribbean",
+        "The Tourist"
+      ],
       "fullName": "Johnny Depp",
       "birthYear": "1963",
       "nationality": "USA",
@@ -18,7 +26,11 @@
     },
     {
       "id": 3,
-      "movies": ["Alien", "Avatar", "Aliens"],
+      "movies": [
+        "Alien",
+        "Avatar",
+        "Aliens"
+      ],
       "fullName": "Sigourney Weaver",
       "birthYear": "1949",
       "nationality": "USA",
@@ -28,7 +40,11 @@
   "directors": [
     {
       "id": 1,
-      "movies": ["Indiana Johns", "Schindler's List", "Saving Private Ryan"],
+      "movies": [
+        "Indiana Johns",
+        "Schindler's List",
+        "Saving Private Ryan"
+      ],
       "fullName": "Steven Spielberg",
       "birthYear": "1946",
       "nationality": "USA",
@@ -36,7 +52,11 @@
     },
     {
       "id": 2,
-      "movies": ["Alien", "Gladiator", "Robin Hood"],
+      "movies": [
+        "Alien",
+        "Gladiator",
+        "Robin Hood"
+      ],
       "fullName": "Ridley Scott",
       "birthYear": "1937",
       "nationality": "UK",
@@ -44,21 +64,24 @@
     },
     {
       "id": 3,
-      "movies": ["Rambo", "Terminator", "Avatar"],
+      "movies": [
+        "Rambo",
+        "Terminator",
+        "Avatar"
+      ],
       "fullName": "James Cameron",
       "birthYear": "1954",
       "nationality": "Canada",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/James_Cameron_by_Gage_Skidmore.jpg/240px-James_Cameron_by_Gage_Skidmore.jpg"
     }
-    
   ],
   "movies": [
     {
       "id": 1,
       "title": "Indiana Johns",
-      "directorId": 1,
-      "actorId": 1,
-      "studioId": 1,
+      "directorId": "Stiven Spilberg",
+      "actorId": "Harrison  Ford",
+      "studioId": "Lukas Film",
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/8/8b/IJandCrystalSkull.jpg/220px-IJandCrystalSkull.jpg"
     },
     {
@@ -84,6 +107,14 @@
       "actorId": 3,
       "studioId": 2,
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/7/79/Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg/201px-Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg"
+    },
+    {
+      "id": 1658331022883,
+      "title": "asa",
+      "directorId": "ss",
+      "actorId": "hf",
+      "studioId": 0,
+      "poster": ""
     }
   ],
   "studios": [
@@ -102,5 +133,4 @@
       "logo": "https://upload.wikimedia.org/wikipedia/ru/thumb/5/5e/20th_Century_Studios.svg/250px-20th_Century_Studios.svg.png"
     }
   ]
-
 }

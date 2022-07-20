@@ -2,8 +2,10 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
-
-import { getAllMoviesAction } from '../../store/actions/movieActions';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
+// ================================================
+import { getAllMoviesAction, deleteMovieAction} from '../../store/actions/movieActions';
 
 function MovieList() {
 	const dispatch = useDispatch();
@@ -14,6 +16,10 @@ function MovieList() {
 	useEffect(() => {
 		dispatch(getAllMoviesAction());
 	}, [dispatch]);
+
+	const onDelete = (id) => { 
+		dispatch(deleteMovieAction(id))
+	 }
 
 	return (
 		<ul className='movies-container'>
@@ -28,9 +34,10 @@ function MovieList() {
 							<p>{movie.title}</p>
 						</Link>
 						<Link to={`new/${movie.id}`}>
-							<p>Edit</p>
+							<EditIcon/>
 						</Link>
-						<p>Delete</p>
+						<DeleteIcon 
+							onClick={() => onDelete(movie.id)}/>
 					</Stack>
 				</li>
 			))}

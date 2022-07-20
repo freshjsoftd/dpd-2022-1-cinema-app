@@ -1,0 +1,9 @@
+img{
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 300px;
+  height: 300px;
+}
+.movie-header{
+  text-align: center;
+}

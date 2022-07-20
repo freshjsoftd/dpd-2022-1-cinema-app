@@ -1,11 +1,12 @@
 import { emptyMovie } from '../../constants';
+import { createMovieAction, updateMovieAction } from '../../store/actions/movieActions'
 import './movieForm.css';
 // ================================
 import React from 'react';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import SaveIcon from '@mui/icons-material/Save';
@@ -19,6 +20,7 @@ function MovieForm() {
 		moviesList: { movies },
 	} = useSelector((state) => state);
 	const { id } = useParams();
+	const navigate = useNavigate();
 
 	const currentMovie = movies.find((movies) => movies.id === parseInt(id));
 
@@ -26,8 +28,12 @@ function MovieForm() {
 		title: Yup.string().required('Title is required'),
 	});
 
+	const goHome = () => navigate('/movies');
+
 	const onMovieSubmit = (values) => {
-		!values.id ? console.log('create') : console.log('update');
+		!values.id ? dispatch(createMovieAction({...values, id: Date.now()}))
+							 : dispatch(updateMovieAction(values));
+							 goHome()
 	};
 
 	const renderForm = ({ isValid }) => {
@@ -77,7 +83,7 @@ function MovieForm() {
                 variant='contained'
                 type="button"
                 className="form-btn"
-                // onClick={goHome}
+                onClick={goHome}
                 size="large"
                 startIcon={<KeyboardReturnIcon/>}
             >

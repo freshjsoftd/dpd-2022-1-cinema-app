@@ -17,7 +17,7 @@ function Layout() {
 					<Grid item lg={12} md={12} xl={12} sm={12} xs={12}>
 						<AppHeader />
 					</Grid>
-					<Grid item lg={3} md={3} xl={3} sm={3} xs={3}>
+					<Grid item lg={2} md={2} xl={2} sm={2} xs={2}>
 						<ul>
               <li>
                 <Link to='/movies'>Movies</Link>
@@ -33,12 +33,12 @@ function Layout() {
               </li>
             </ul>
 					</Grid>
-					<Grid item lg={6} md={6} xl={6} sm={6} xs={6}>
+					<Grid item lg={5} md={5} xl={5} sm={5} xs={5}>
 						<main>
               <Outlet />
             </main>
 					</Grid>
-					<Grid item lg={3} md={3} xl={3} sm={3} xs={3}>
+					<Grid item lg={5} md={5} xl={5} sm={5} xs={5}>
 						<CinemaService />
 					</Grid>
 					<Grid item lg={12} md={12} xl={12} sm={12} xs={6}>

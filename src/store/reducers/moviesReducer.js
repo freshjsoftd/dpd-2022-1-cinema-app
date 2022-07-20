@@ -9,7 +9,7 @@ export default function moviesReducer(state = initialState, {type, payload}){
   
   switch(type){
     case ACTIONS_TYPES.GET_MOVIE_SUCCESS:
-    case ACTIONS_TYPES.GET_MOVIES_SUCCESS: return {...state, movies: payload, isFetching: false};
+    case ACTIONS_TYPES.GET_MOVIES_SUCCESS: return {...state, movies: [...payload], isFetching: false};
     case ACTIONS_TYPES.POST_MOVIE_SUCCESS: return {...state, 
                                           movies: [...state.movies, payload],
                                           isFetching: false};
