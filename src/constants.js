@@ -4,8 +4,8 @@ export const emptyMovie = {
   
     "id": null,
     "title": "",
-    "directorId": 0,
-    "actorId": 0,
-    "studioId": 0,
+    "directors": [''],
+    "actors": [''],
+    "studios": [''],
     "poster": ""
 }

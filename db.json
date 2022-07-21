@@ -79,41 +79,72 @@
     {
       "id": 1,
       "title": "Indiana Johns",
-      "directorId": "Stiven Spilberg",
-      "actorId": "Harrison  Ford",
-      "studioId": "Lukas Film",
+      "directors": [
+        "Stiven Spilberg",
+        "Piter Jackson"
+      ],
+      "actors": [
+        "Harrison  Ford",
+        "Sean Connery"
+      ],
+      "studios": [
+        "Lukas Film"
+      ],
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/8/8b/IJandCrystalSkull.jpg/220px-IJandCrystalSkull.jpg"
     },
     {
       "id": 2,
       "title": "Alien",
-      "directorId": 2,
-      "actorId": 3,
-      "studioId": 2,
+      "directors": [
+        "Ridley Scott"
+      ],
+      "actors": [
+        "Sigourney Weaver"
+      ],
+      "studios": [
+        "20th Century Studios, Inc."
+      ],
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/c/c3/Alien_movie_poster.jpg/232px-Alien_movie_poster.jpg"
     },
     {
       "id": 3,
       "title": "Aliens",
-      "directorId": 3,
-      "actorId": 2,
-      "studioId": 2,
+      "directors": [
+        "James Cameron"
+      ],
+      "actors": [
+        "Sigourney Weaver"
+      ],
+      "studios": [
+        "20th Century Studios, Inc."
+      ],
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/f/fb/Aliens_poster.jpg/196px-Aliens_poster.jpg"
     },
     {
       "id": 4,
       "title": "Pirates of the Caribbean:",
-      "directorId": 3,
-      "actorId": 3,
-      "studioId": 2,
+      "directors": [
+        "Piter Jackson"
+      ],
+      "actors": [
+        "Johnny Depp"
+      ],
+      "studios": [
+        "Lucasfilm Ltd. LLC"
+      ],
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/7/79/Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg/201px-Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg"
     },
     {
-      "id": 1658331022883,
-      "title": "asa",
-      "directorId": "ss",
-      "actorId": "hf",
-      "studioId": 0,
+      "id": 1658431366848,
+      "title": "AssA",
+      "directors": [
+        "Govorun"
+      ],
+      "actors": [
+        "Victor Tscoy",
+        "Gang"
+      ],
+      "studios": "New Line Cinema",
       "poster": ""
     }
   ],

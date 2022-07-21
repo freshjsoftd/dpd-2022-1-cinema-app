@@ -8,6 +8,7 @@ import './MovieItem.css';
 function MovieItem({movies}) {
 	const { id } = useParams();
 	const movie = movies.find((movie) => movie.id === parseInt(id));
+	console.log(movie)
 
 	return (
 		<Grid container>
@@ -22,9 +23,19 @@ function MovieItem({movies}) {
 			<Grid item lg={6} md={6} xl={6} sm={6} xs={6}>
         <Stack>
 				<h2>Movie definition</h2>
-        <p>{movie.actorId}</p>
-        <p>{movie.directorId}</p>
-        <p>{movie.studioId}</p>
+				<h2>Actors</h2>
+				{movie.actors.map((actor, index) => (
+					<p key={Date.now() + index}>{actor}</p>
+				))}
+				<h2>Directors</h2>
+				{movie.directors.map((director, index) => (
+					<p key={Date.now() + index}>{director}</p>
+				))}
+				<h2>Studios</h2>
+				{movie.studios.map((studio, index) => (
+					<p key={Date.now() + index}>{studio}</p>
+				))}
+        
         </Stack>
 			</Grid>
 		</Grid>
