@@ -1,22 +1,15 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Stack from '@mui/material/Stack';
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
 // ================================================
-import { getAllMoviesAction, deleteMovieAction} from '../../store/actions/movieActions';
+import { deleteMovieAction} from '../../store/actions/movieActions';
 
-function MovieList() {
+function MovieList({movies}) {
 	const dispatch = useDispatch();
-	const {
-		moviesList: { movies },
-	} = useSelector((state) => state);
-
-	useEffect(() => {
-		dispatch(getAllMoviesAction());
-	}, [dispatch]);
-
+	
 	const onDelete = (id) => { 
 		dispatch(deleteMovieAction(id))
 	 }

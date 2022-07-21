@@ -1,20 +1,13 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 // =============
 import './MovieItem.css';
 
-function MovieItem() {
+function MovieItem({movies}) {
 	const { id } = useParams();
-	const {
-		moviesList: { movies },
-	} = useSelector((state) => state);
-
-	console.log(movies);
 	const movie = movies.find((movie) => movie.id === parseInt(id));
-	console.log(movie);
 
 	return (
 		<Grid container>
