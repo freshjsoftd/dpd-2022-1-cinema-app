@@ -6,7 +6,7 @@ import {
 	deleteMovieError,
 	deleteMovieRequest,
 	deleteMovieSuccess,
-	gelMovieRequest,
+	getMovieRequest,
 	getAllMoviesError,
 	getAllMoviesRequest,
   getAllMoviesSuccess,
@@ -29,7 +29,7 @@ export function* getAllMoviesSaga() {
 	}
 }
 export function* getMovieSaga({payload}) {
-	yield put(gelMovieRequest());
+	yield put(getMovieRequest());
 	try {
 		const movie = yield cinemaService.get(`/movies/${payload}`)
                   .then(({data}) => data);

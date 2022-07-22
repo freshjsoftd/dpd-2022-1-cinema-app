@@ -29,7 +29,7 @@ export const getMovieAction = (payload) => {
     payload
   }
  }
-export const gelMovieRequest = () => { 
+export const getMovieRequest = () => { 
   return {
     type: ACTIONS_TYPES.GET_MOVIE_REQUEST,
   }

@@ -13,14 +13,25 @@
 }
 .field-container{
   margin: 10px;
+  padding: 10px;
+}
+.items-container{
+  padding: 10px;
+  min-height: 50%;
+}
+.item{
+  min-height: 20px;
 }
 #form{
   font-size: 20px;
 }
 input, textarea{
   font-size: 20px;
-  min-width: 80%;
+  min-width: 70%;
+  background-color: aquamarine;
 }
 textarea{
   font-size: 15px;
+  min-height: 150px;
+  min-width: 70%;
 }

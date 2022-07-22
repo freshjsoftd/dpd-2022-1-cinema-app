@@ -3,11 +3,13 @@ import { useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 // =============
+import { emptyMovie } from '../../constants'
 import './MovieItem.css';
 
 function MovieItem({movies}) {
 	const { id } = useParams();
-	const movie = movies.find((movie) => movie.id === parseInt(id));
+	const film = movies.find((movie) => movie.id === parseInt(id));
+	const movie = film ? film : emptyMovie;
 	// console.log(movie)
 
 	return (
@@ -35,7 +37,6 @@ function MovieItem({movies}) {
 				{movie.studios.map((studio, index) => (
 					<p key={Date.now() + index}>{studio}</p>
 				))}
-        
         </Stack>
 			</Grid>
 		</Grid>

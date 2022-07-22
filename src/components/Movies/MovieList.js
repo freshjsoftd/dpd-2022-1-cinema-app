@@ -23,7 +23,7 @@ function MovieList({movies}) {
 						spacing={3}
 						justifyContent='flex-start'
 						alignItems='center'>
-						<Link to={`${movie.id}`} style={{minWidth: '300px'}}>
+						<Link to={`${movie.id}`} className='title-link'>
 							<p>{movie.title}</p>
 						</Link>
 						<Link to={`new/${movie.id}`}>

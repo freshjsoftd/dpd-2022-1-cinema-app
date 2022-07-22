@@ -1,19 +1,21 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import ActorForm from '../Actors/ActorForm';
 import MovieForm from '../Movies/MovieForm';
 
 const styles = {
-	backgroundColor: 'rgb(25, 118, 210)',
-	border: '1px solid',
+	textAlign: 'center',
 };
 
 function CinemaService() {
 	return (
 		<>
-			<div style={styles}>CinemaService</div>
+			<h1 style={styles}>CinemaService</h1>
 			<Routes>
 				<Route path='/movies/new' element={<MovieForm />} />
 				<Route path='/movies/new/:id' element={<MovieForm />}/>
+				<Route path='/actors/new' element={<ActorForm />} />
+				<Route path='/actors/new/:id' element={<ActorForm />}/>
 			</Routes>
 		</>
 	);

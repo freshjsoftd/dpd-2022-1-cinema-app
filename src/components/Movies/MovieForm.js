@@ -4,6 +4,7 @@ import {
 	updateMovieAction,
 } from '../../store/actions/movieActions';
 import './movieForm.css';
+// import CreateMovieField from './CreateMovieField'
 // ================================
 import React from 'react';
 import { ErrorMessage, Field, FieldArray, Form, Formik } from 'formik';
@@ -42,25 +43,25 @@ function MovieForm() {
 	};
 
 	const renderForm = (props) => {
-		console.log('Values', props.values);
+		console.log('props', props);
 		return (
 			<Form id='form'>
 				<Stack className='field-container'>
-					<Stack direction='row' spacing={2}>
+					<Stack direction='row' spacing={2} sx={{bgcolor: 'aquamarine'}}>
 						<label htmlFor='title' className='label'>
 							Title
 						</label>
-						<Field name='title'></Field>
+						<Field name='title'/>
 					</Stack>
 					<ErrorMessage name='title'>
 						{(msg) => <div className='error'>{msg}</div>}
 					</ErrorMessage>
 				</Stack>
-				<fieldset className='actors-container'>
+				<fieldset className='items-container'>
 					<legend>Actors</legend>
 					<FieldArray name='actors'>
 						{(fieldArrayProps) => {
-							console.log('fieldArrayProps', fieldArrayProps)
+							console.log('fieldArrayProps', fieldArrayProps);
 							const {push, remove, form} = fieldArrayProps;
 							const {values} = form;
 							const {actors} = values;
@@ -68,7 +69,16 @@ function MovieForm() {
 								<Stack spacing={2}>
 									{actors.map((actor, index) => (
 										<Stack direction='row' key={index} spacing={2}>
-											<Field name={`actors[${index}]`}/>
+											<Field name={`actors[${index}]`} />
+											{/* <Field name={`actors[${index}]`}>
+												{({field, form, meta}) => (
+													<CreateMovieField 
+														fieldName={field.name}
+														array={movies}
+														label='label'
+														/>
+												)}
+											</Field> */}
 											{index > 0 && <Button 
 													type='button'
 													variant='contained' 
@@ -89,7 +99,7 @@ function MovieForm() {
 						}}
 					</FieldArray>
 				</fieldset>
-				<fieldset className='directors-container'>
+				<fieldset className='items-container'>
 					<legend>Directors</legend>
 					<FieldArray name='directors'>
 						{({push, remove, form: {values: {directors}}}) => {
@@ -117,14 +127,8 @@ function MovieForm() {
 							)
 						}}
 					</FieldArray>
-					{/* <Stack spacing={2} className='field-container'>
-						{/* <label htmlFor='directors' className='label'>Director</label> */}
-						{/* <Field type='text' name={`directors[0]`} /> */}
-						{/* <Field type='text' name={`directors[1]`} /> */}
-						{/* <Field name='directors'></Field> }
-					</Stack> */}
 				</fieldset>
-				<fieldset className='studios-container'>
+				<fieldset className='items-container'>
 					<legend>Studios</legend>
 					<FieldArray name='studios'>
 						{({push, remove, form: {values}}) => {
@@ -205,26 +209,3 @@ function MovieForm() {
 }
 
 export default MovieForm;
-{
-	/* <FieldArray 
-							name='actors'
-							render={(arrayHelpers) => {
-							return (
-								<div>
-									{props.values.actors.map((actor, index, actors) => (
-										<Stack className='field-container' key={index}>
-											<Field  name={`${actors}}`}>
-												{/* {({field, form, meta}) => (
-													<div>
-														<input type='text' {...field}/>
-													</div>
-												)} 
-											</Field>
-										</Stack>
-									))}
-								</div>
-							)
-						}}
-							>
-					</FieldArray> */
-}

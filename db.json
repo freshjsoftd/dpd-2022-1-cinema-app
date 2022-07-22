@@ -1,11 +1,12 @@
 {
-  "arctors": [
+  "actors": [
     {
       "id": 1,
       "movies": [
         "Indiana Johns",
         "The star wars",
-        "Patriot Games"
+        "Patriot Games",
+        "Gentelmens of fortune"
       ],
       "fullName": "Harrison Ford",
       "birthYear": "1942",
@@ -17,7 +18,8 @@
       "movies": [
         "Sleepy Hollow",
         "Pirates of the Caribbean",
-        "The Tourist"
+        "The Tourist",
+        "Alice in Wonderland"
       ],
       "fullName": "Johnny Depp",
       "birthYear": "1963",
@@ -123,15 +125,31 @@
       "id": 4,
       "title": "Pirates of the Caribbean:",
       "directors": [
-        "Piter Jackson"
+        "Gregor (Gore) Verbinski"
       ],
       "actors": [
-        "Johnny Depp"
+        "Johnny Depp",
+        "Orlando Bloom"
       ],
       "studios": [
-        "Lucasfilm Ltd. LLC"
+        "Walt Disney Pictures"
       ],
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/7/79/Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg/201px-Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg"
+    },
+    {
+      "id": 1658475813029,
+      "title": "The Lord Of The Rings",
+      "directors": [
+        "Peter Jackson"
+      ],
+      "actors": [
+        "Elijah Wood",
+        "Ian McKellen"
+      ],
+      "studios": [
+        "New Line Cinema "
+      ],
+      "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/0/08/The_Lord_of_the_Rings._The_Fellowship_of_the_Ring_%E2%80%94_movie.jpg/203px-The_Lord_of_the_Rings._The_Fellowship_of_the_Ring_%E2%80%94_movie.jpg"
     }
   ],
   "studios": [

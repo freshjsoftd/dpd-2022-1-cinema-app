@@ -9,3 +9,10 @@ img{
 .movie-header{
   text-align: center;
 }
+.movies-container{
+  list-style: none;
+}
+.title-link{
+  text-transform: capitalize;
+  min-width: 300px;
+}
