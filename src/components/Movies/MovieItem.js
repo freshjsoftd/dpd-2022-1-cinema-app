@@ -8,7 +8,7 @@ import './MovieItem.css';
 function MovieItem({movies}) {
 	const { id } = useParams();
 	const movie = movies.find((movie) => movie.id === parseInt(id));
-	console.log(movie)
+	// console.log(movie)
 
 	return (
 		<Grid container>

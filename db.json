@@ -80,8 +80,7 @@
       "id": 1,
       "title": "Indiana Johns",
       "directors": [
-        "Stiven Spilberg",
-        "Piter Jackson"
+        "Stiven Spilberg"
       ],
       "actors": [
         "Harrison  Ford",
@@ -133,19 +132,6 @@
         "Lucasfilm Ltd. LLC"
       ],
       "poster": "https://upload.wikimedia.org/wikipedia/ru/thumb/7/79/Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg/201px-Pirates-of-the-Caribbean-The-Curse-of-the-Black-Pearl-.jpg"
-    },
-    {
-      "id": 1658431366848,
-      "title": "AssA",
-      "directors": [
-        "Govorun"
-      ],
-      "actors": [
-        "Victor Tscoy",
-        "Gang"
-      ],
-      "studios": "New Line Cinema",
-      "poster": ""
     }
   ],
   "studios": [

@@ -15,6 +15,8 @@ import Button from '@mui/material/Button';
 import SaveIcon from '@mui/icons-material/Save';
 import ClearIcon from '@mui/icons-material/Clear';
 import KeyboardReturnIcon from '@mui/icons-material/KeyboardReturn';
+import AddIcon from '@mui/icons-material/Add';
+import RemoveIcon from '@mui/icons-material/Remove';
 
 function MovieForm() {
 	const dispatch = useDispatch();
@@ -67,8 +69,19 @@ function MovieForm() {
 									{actors.map((actor, index) => (
 										<Stack direction='row' key={index} spacing={2}>
 											<Field name={`actors[${index}]`}/>
-											{index > 0 && <button type='button' onClick={()=> remove(index)}>-</button>}
-											<button type='button' onClick={() => push('')}> + </button>
+											{index > 0 && <Button 
+													type='button'
+													variant='contained' 
+													size='small'
+													startIcon={<RemoveIcon/>}
+													onClick={()=> remove(index)}></Button>}
+											<Button 
+													variant='contained' 
+													size='small' 
+													type='button' 
+													startIcon={<AddIcon/>}
+													onClick={() => push('')}
+													></Button>
 										</Stack>
 									)) }
 								</Stack>
@@ -85,8 +98,19 @@ function MovieForm() {
 									{directors.map((director, index) => (
 										<Stack key={index} direction='row' spacing={2}>
 											<Field name={`directors[${index}]`}/>
-											{index > 0 && <button type='button' onClick={()=> remove(index)}>-</button>}
-											<button type='button' onClick={() => push('')}> + </button>
+											{index > 0 && <Button 
+													type='button'
+													variant='contained' 
+													size='small'
+													startIcon={<RemoveIcon/>}
+													onClick={()=> remove(index)}></Button>}
+											<Button 
+													variant='contained' 
+													size='small' 
+													type='button' 
+													startIcon={<AddIcon/>}
+													onClick={() => push('')}
+													></Button>
 										</Stack>
 									))}
 								</Stack>
@@ -102,10 +126,33 @@ function MovieForm() {
 				</fieldset>
 				<fieldset className='studios-container'>
 					<legend>Studios</legend>
-					<Stack spacing={2} className='field-container'>
-						{/* <label htmlFor='studios' className='label'>Studio</label> */}
-						<Field name='studios'></Field>
-					</Stack>
+					<FieldArray name='studios'>
+						{({push, remove, form: {values}}) => {
+							const {studios} = values;
+							return (
+								<Stack spacing={2}>
+									{studios.map((studio, index) => (
+										<Stack key={index} direction='row' spacing={2}>
+											<Field name={`studios[${index}]`}/>
+											{index > 0 && <Button 
+													type='button'
+													variant='contained' 
+													size='small'
+													startIcon={<RemoveIcon/>}
+													onClick={()=> remove(index)}></Button>}
+											<Button 
+													variant='contained' 
+													size='small' 
+													type='button' 
+													startIcon={<AddIcon/>}
+													onClick={() => push('')}
+													></Button>
+										</Stack>
+									))}
+								</Stack>
+							)
+						}}
+					</FieldArray>
 				</fieldset>
 				<Stack direction='row' spacing={2} className='field-container'>
 					<label htmlFor='poster' className='label'>
@@ -121,7 +168,8 @@ function MovieForm() {
 						className='form-btn'
 						size='large'
 						startIcon={<SaveIcon />}
-						style={{ backgroundColor: 'teal' }}>
+						// style={{ backgroundColor: 'teal' }}
+						>
 						Save
 					</Button>
 					<Button
