@@ -21,10 +21,7 @@ function Actors() {
 				<Link to='new'>New</Link>
 			</div>
 			<Routes>
-				<Route
-					path=':id'
-					element={<ActorItem actors={actors} />}
-				/>
+				<Route path=':id' element={<ActorItem actors={actors} />}	/>
 				<Route path='/' element={<ActorList actors={actors} />} />
 				{/* <Route path='new/:id' element={<ActorItem/>}/> */}
 			</Routes>

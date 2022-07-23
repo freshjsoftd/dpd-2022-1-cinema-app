@@ -17,3 +17,14 @@ export const emptyActor = {
 	nationality: '',
 	image: '',
 };
+
+export const nationalities = [
+	'USA',
+	'United Kingdom',
+	'Canada',
+	'France',
+	'Australia',
+	'Germany',
+	'Ukraine',
+	'Italy'
+]

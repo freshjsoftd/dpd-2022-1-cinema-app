@@ -8,7 +8,7 @@ const initialState = {
 export default function moviesReducer(state = initialState, {type, payload}){
   
   switch(type){
-    case ACTIONS_TYPES.GET_MOVIE_SUCCESS:
+    // case ACTIONS_TYPES.GET_MOVIE_SUCCESS:
     case ACTIONS_TYPES.GET_MOVIES_SUCCESS: return {...state, movies: [...payload], isFetching: false};
     case ACTIONS_TYPES.POST_MOVIE_SUCCESS: return {...state, 
                                           movies: [...state.movies, payload],
@@ -20,12 +20,12 @@ export default function moviesReducer(state = initialState, {type, payload}){
     case ACTIONS_TYPES.DELETE_MOVIE_SUCCESS: return {...state, 
                                             movies: state.movies.filter((movie) => movie.id !== payload),
                                             isFetching: false}
-    case ACTIONS_TYPES.GET_MOVIE_REQUEST:
+    // case ACTIONS_TYPES.GET_MOVIE_REQUEST:
     case ACTIONS_TYPES.POST_MOVIE_REQUEST:
     case ACTIONS_TYPES.PUT_MOVIE_REQUEST:
     case ACTIONS_TYPES.DELETE_MOVIE_REQUEST:
     case ACTIONS_TYPES.GET_MOVIES_REQUEST: return {...state, isFetching: true};
-    case ACTIONS_TYPES.GET_MOVIE_ERROR:
+    // case ACTIONS_TYPES.GET_MOVIE_ERROR:
     case ACTIONS_TYPES.POST_MOVIE_ERROR:
     case ACTIONS_TYPES.PUT_MOVIE_ERROR:
     case ACTIONS_TYPES.DELETE_MOVIE_ERROR:

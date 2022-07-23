@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link, Navigate, Route, Routes } from 'react-router-dom'
+import { Link, Route, Routes } from 'react-router-dom'
 
 // import MovieForm from './MovieForm'
 import MovieItem from './MovieItem'
@@ -24,7 +24,7 @@ function Movies() {
     <Routes>
       <Route path=':id' element={<MovieItem movies={movies}/>}/>
       <Route path='/' element={<MovieList movies={movies}/>}/>
-      <Route path='new' element={<Navigate to='/movies/new/:id'/>}/>
+      {/* <Route path='new' element={<Navigate to='/movies/new/:id'/>}/> */}
     </Routes>
     </>
   )

@@ -22,8 +22,8 @@
         "Alice in Wonderland"
       ],
       "fullName": "Johnny Depp",
-      "birthYear": "1963",
-      "nationality": "USA",
+      "birthYear": 1963,
+      "nationality": "Ukraine",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Johnny_Depp_Deauville_2019.jpg/220px-Johnny_Depp_Deauville_2019.jpg"
     },
     {
@@ -34,7 +34,7 @@
         "Aliens"
       ],
       "fullName": "Sigourney Weaver",
-      "birthYear": "1949",
+      "birthYear": 1962,
       "nationality": "USA",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Sigourney_Weaver_by_Gage_Skidmore_4.jpg/250px-Sigourney_Weaver_by_Gage_Skidmore_4.jpg"
     }
