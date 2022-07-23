@@ -25,17 +25,17 @@ function MovieItem({movies}) {
 			<Grid item lg={6} md={6} xl={6} sm={6} xs={6}>
         <Stack>
 				<h2>Movie definition</h2>
-				<h2>Actors</h2>
+				<h3>Actors</h3>
 				{movie.actors.map((actor, index) => (
-					<p key={Date.now() + index}>{actor}</p>
+					<p key={index}>{actor}</p>
 				))}
-				<h2>Directors</h2>
+				<h3>Directors</h3>
 				{movie.directors.map((director, index) => (
-					<p key={Date.now() + index}>{director}</p>
+					<p key={index}>{director}</p>
 				))}
-				<h2>Studios</h2>
+				<h3>Studios</h3>
 				{movie.studios.map((studio, index) => (
-					<p key={Date.now() + index}>{studio}</p>
+					<p key={index}>{studio}</p>
 				))}
         </Stack>
 			</Grid>

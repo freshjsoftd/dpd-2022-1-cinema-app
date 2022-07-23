@@ -21,9 +21,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 
 function MovieForm() {
 	const dispatch = useDispatch();
-	const {
-		moviesList: { movies },
-	} = useSelector((state) => state);
+	const {moviesList: { movies }} = useSelector((state) => state);
 	const { id } = useParams();
 	const navigate = useNavigate();
 
@@ -35,7 +33,7 @@ function MovieForm() {
 
 	const goHome = () => navigate('/movies');
 
-	const onMovieSubmit = (values) => {
+	const onMovieSubmit = (values, actions) => {
 		!values.id
 			? dispatch(createMovieAction({ ...values, id: Date.now() }))
 			: dispatch(updateMovieAction(values));
