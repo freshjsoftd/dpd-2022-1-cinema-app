@@ -18,6 +18,15 @@ export const emptyActor = {
 	image: '',
 };
 
+export const emptyDirector = {
+	id: null,
+	movies: [''],
+	fullName: '',
+	birthYear: '',
+	nationality: '',
+	image: '',
+};
+
 export const nationalities = [
 	'USA',
 	'United Kingdom',

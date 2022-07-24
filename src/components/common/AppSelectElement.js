@@ -11,7 +11,8 @@ function AppSelectElement({field, meta}) {
   const {directorsList: {directors}} = array;
   const {studiosList: {studios}} = array;
 
-  console.log(movies)
+  // console.log(movies)
+  
   const createYearList = () => {
     let array = [];
     for (let year = 1900; year < (new Date().getFullYear()-10); year++) {
